@@ -1,0 +1,68 @@
+<app-home></app-home>
+<div class="login">
+   
+    <!-- <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <div>
+        <input type="text" formControlName="mobile_no" required>
+        <span></span>
+        <label>Mobile No</label>
+
+        </div>
+        
+        <div>
+            <input type="password" formControlName="password" required>
+            <span></span>
+            <label >Password</label>
+        </div>
+        <div>
+            <p> please select a role</p>
+            <input type="radio" formControlName="role" value="user" required>
+                <label>User</label>
+                <input type="radio" formControlName="role" value="driver" required>
+                <label>Driver Partner</label>
+        </div>
+
+        <div class="pass">Forgot Password?</div>
+        <input type="submit"  value="Login">
+        <div class="signup_link">
+          Not a member? <a href="signup/">Signup</a>
+        </div>
+        <a class="btn btn-dark" href="/">back to home</a>
+    </form> -->
+
+    <form class="formc">
+        <div> <br><h4>LOGIN</h4></div>
+        <br>
+        <hr>
+        <div class="login-field">
+        <div id="mobile">
+            
+            <label>Mobile No</label>
+           <label >&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;</label> 
+            <label  id ="password"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Password</label>
+            <br>
+        </div>
+        <div>
+            <input type="text" class="fields" name= "mobile_no" [(ngModel)]="loginobj.mobile_no" placeholder="Enter your mobile no" required>
+            <label > &nbsp; &nbsp; &nbsp;</label>
+            <input type="password" class="fields" name= "password" [(ngModel)]="loginobj.password" placeholder="Enter your password here" required>
+            <span></span> 
+        </div>
+        <div>
+            <br>
+          
+      <label>Sign in as : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="radio" class="fields"  name= "role" [(ngModel)]="loginobj.role" value="user" required>
+                <label>User</label>
+                <input type="radio" class="fields" name= "role" [(ngModel)]="loginobj.role" value="admin" required>
+                <label>Admin</label>
+        </div>
+    </div>
+
+    <br>
+        <button (click)="onLogin()" class="btn"> Login </button>
+        <br>
+        <br>
+        <div class="pass">Forgot Password?</div>
+            </form>
+</div>

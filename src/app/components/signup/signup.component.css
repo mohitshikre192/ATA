@@ -1,0 +1,12 @@
+label{
+    text-align:left;
+}
+input{
+    margin-left: 20px;
+     margin-bottom: 10px;
+     padding-left: 5%;
+     padding-right: 5%;
+   /* font-display: flex; */
+   display:inline-block;
+
+}
