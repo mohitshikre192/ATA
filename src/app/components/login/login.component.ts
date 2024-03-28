@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit{
   
   ngOnInit(): void {
     this.loginForm=this.formBuilder.group({
-      mobile:['',[Validators.required]],
+      mobile_no:['',[Validators.required]],
       password:['',Validators.required],
       role:['',Validators.required]
     });
@@ -75,7 +75,7 @@ export class LoginComponent implements OnInit{
   
   onLogin()
   {
-   
+   debugger;  
     this.http.post('https://localhost:7034/api/Login/',this.loginobj)
   .subscribe({
     next: (data:any) => {
@@ -93,7 +93,7 @@ export class LoginComponent implements OnInit{
             this.toast.error('Login Failed!!!','Error')
    
             this.loading = false;
-           this.loginForm.reset();
+          //  this.loginobj.reset();
   
   }
   })

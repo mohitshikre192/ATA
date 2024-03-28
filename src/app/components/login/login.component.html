@@ -31,9 +31,9 @@
     </form> -->
 
     <form class="formc">
-        <div> <br><h4>LOGIN</h4></div>
+        
+        <div> <br><h4>LOGIN</h4><a class ="close"href="/">X</a> </div>
         <br>
-        <hr>
         <div class="login-field">
         <div id="mobile">
             
@@ -45,6 +45,7 @@
         <div>
             <input type="text" class="fields" name= "mobile_no" [(ngModel)]="loginobj.mobile_no" placeholder="Enter your mobile no" required>
             <label > &nbsp; &nbsp; &nbsp;</label>
+       
             <input type="password" class="fields" name= "password" [(ngModel)]="loginobj.password" placeholder="Enter your password here" required>
             <span></span> 
         </div>
