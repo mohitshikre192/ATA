@@ -62,21 +62,47 @@
         <div class="input-box">
           <label>Full Name</label>
           <input type="text"name ="name" formControlName="name" placeholder="Enter full name" required />
+          <div style= "color:red;"*ngIf="f['name'] && f['name'].invalid && f['name'].touched">
+            Name is required!!
+          </div>
         </div>
 
         <div class="input-box">
           <label>Email Address</label>
           <input type="text" name ="email" formControlName="email" placeholder="Enter email address" required />
+           <div style= "color:red;"*ngIf="f.email && f.email.invalid && f.email.touched">
+          <div *ngIf="f.email.errors?.required">
+              Email is required !!!
+          </div>
+        <div *ngIf="f.email.errors?.email">
+            Please enter valid email
         </div>
+          </div>
+    
+        </div>
+
 
         <div class="column">
           <div class="input-box">
             <label>Phone Number</label>
             <input type="string" name ="mobile_no" formControlName="mobile_no" placeholder="Enter phone number" required />
+            <div style= "color:red;"*ngIf="f.mobile_no&& f.mobile_no.invalid && f.mobile_no.touched">
+              <div *ngIf="f.mobile_no.errors?.required">
+                  Mobile number is required !!!
+              </div>
+            <div *ngIf="f.mobile_no.errors?.pattern">
+              Entered Mobile number is not 10 digit
+            </div>
+              </div>
           </div>
           <div class="input-box">
             <label>Birth Date</label>
             <input type="date" name ="dob" formControlName="dob" placeholder="Enter birth date" required />
+            <div style= "color:red;"*ngIf="f.dob && f.dob.invalid && f.dob.touched">
+              <div *ngIf="f.dob.errors?.required">
+              DOB is required !!!
+            </div>
+          </div>
           </div>
         </div>
         <div class="gender-box">
@@ -100,10 +126,21 @@
             <div class="input-box">
               <label>Password</label>
               <input type="password"name="password" formControlName="password" placeholder="Create your password" required />
+              <div style= "color:red;"*ngIf="f.password&& f.password.invalid && f.password.touched">
+                <div *ngIf="f.password.errors?.required">
+                    Mobile number is required !!!
+                </div>
+                </div>
             </div>
             <div class="input-box">
               <label>Confirm Password</label>
               <input type="string" name ="c_password" formControlName="c_password" placeholder="Re-enter your password" required />
+              <div style= "color:red;"*ngIf="f.c_password && f.c_password.invalid && f.c_password.touched">
+                <div *ngIf="f.c_password.errors?.required">
+                 confirm password is required !!!
+              </div>
+               
+                </div>
             </div>
           </div>
         

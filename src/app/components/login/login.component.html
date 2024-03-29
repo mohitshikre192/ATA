@@ -30,7 +30,7 @@
         <a class="btn btn-dark" href="/">back to home</a>
     </form> -->
 
-    <form class="formc">
+    <form class="formc" [formGroup]="loginForm" (ngSubmit)="Login()">
         
         <div> <br><h4>LOGIN</h4><a class ="close"href="/">X</a> </div>
         <br>
@@ -43,25 +43,25 @@
             <br>
         </div>
         <div>
-            <input type="text" class="fields" name= "mobile_no" [(ngModel)]="loginobj.mobile_no" placeholder="Enter your mobile no" required>
+            <input type="text" class="fields" name="mobile_no" formControlName="mobile_no" placeholder="Enter your mobile no" required>
             <label > &nbsp; &nbsp; &nbsp;</label>
        
-            <input type="password" class="fields" name= "password" [(ngModel)]="loginobj.password" placeholder="Enter your password here" required>
+            <input type="password" class="fields" name="password" formControlName="password" placeholder="Enter your password here" required>
             <span></span> 
         </div>
         <div>
             <br>
           
       <label>Sign in as : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-            <input type="radio" class="fields"  name= "role" [(ngModel)]="loginobj.role" value="user" required>
+            <input type="radio" class="fields"  name="role" formControlName="role" value="user" required>
                 <label>User</label>
-                <input type="radio" class="fields" name= "role" [(ngModel)]="loginobj.role" value="admin" required>
+                <input type="radio" class="fields" name="role" formControlName="role" value="admin" required>
                 <label>Admin</label>
         </div>
-    </div>
+     </div>
 
     <br>
-        <button (click)="onLogin()" class="btn"> Login </button>
+        <button class="btn"> Login </button>
         <br>
         <br>
         <div class="pass">Forgot Password?</div>

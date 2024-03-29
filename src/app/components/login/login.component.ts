@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit{
       password:['',Validators.required],
       role:['',Validators.required]
     });
-    this.returnUrl=this.route.snapshot.queryParams['returnUrl'] || '/';
+   // this.returnUrl=this.route.snapshot.queryParams['returnUrl'] || '/';
   }
   get f(){return this.loginForm.controls;}
   
@@ -98,6 +98,42 @@ export class LoginComponent implements OnInit{
   }
   })
   
+  }
+
+
+  Login()
+  {
+    debugger;
+    this.http.post('https://localhost:7034/api/Login/',this.loginForm)
+  .subscribe({
+    next: (data:any) => {
+     
+      debugger;
+      // alert('login success:');
+      this.toast.success('Login Succesful!!','Success');
+     localStorage.setItem('logintoken',data.token)
+
+    
+      this.router.navigateByUrl('/');
+    },error: () => {
+  
+            // alert('login failed')
+            this.toast.error('Login Failed!!!','Error')
+   
+            this.loading = false;
+          //  this.loginobj.reset();
+  
+  }
+  })
+  }
+  Logout()
+  {
+    
+  }
+
+  isLoggedIn()
+  {
+
   }
   
   }

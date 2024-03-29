@@ -12,7 +12,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrl: './signup.component.css'
 })
 export class SignupComponent {
-  userForm!: FormGroup;;
+  userForm!: FormGroup ;
   constructor(private http: HttpClient,private router: Router,
     private service: JwtDecodeService,private fb: FormBuilder,
     private toast:ToastrService
@@ -20,9 +20,10 @@ export class SignupComponent {
   
   
   ngOnInit():void{
+
   this.userForm=this.fb.group({
   name:['',[Validators.required,Validators.minLength(3)]],
-   mobile_no:['',Validators.required],
+   mobile_no:['',[Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
   email:['',[Validators.required,Validators.email]],
   dob:['',Validators.required],
   gender:['',Validators.required],
@@ -31,6 +32,8 @@ export class SignupComponent {
   
   })
   }
+  get f(){return this.userForm.controls;}
+  
   CreateUser(){
   debugger;
   this.service.createUsers(this.userForm.value)
