@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit{
     });
    // this.returnUrl=this.route.snapshot.queryParams['returnUrl'] || '/';
   }
-  get f(){return this.loginForm.controls;}
+  get f(){return this.loginobj.controls;}
   
   // onSubmit()
   // {
@@ -104,11 +104,10 @@ export class LoginComponent implements OnInit{
   Login()
   {
     debugger;
-    this.http.post('https://localhost:7034/api/Login/',this.loginForm)
+    this.http.post('https://localhost:7034/api/Login/',this.loginForm.value)
   .subscribe({
     next: (data:any) => {
      
-      debugger;
       // alert('login success:');
       this.toast.success('Login Succesful!!','Success');
      localStorage.setItem('logintoken',data.token)

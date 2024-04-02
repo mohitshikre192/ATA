@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap");
+
 .formc{
         background-color: white;
         text-align: center;
@@ -20,6 +22,9 @@
     font-size: large;
     top:0;
    
+}
+.headerf{
+    margin-left:30%;
 }
 
 .fields:hover{
@@ -60,5 +65,46 @@ background-color:aquamarine;
 
 .formc h4 {
     display:inline;
-    margin-left:40%
+    margin-left:0%
 }
+.close{
+ top:0;
+margin-left:60%;
+}
+
+.close:hover{
+    color:red;
+    background-color: aliceblue;
+    border: grey 1px solid;
+}
+
+.password-toggle-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .password-toggle-icon i {
+    font-size: 18px;
+    line-height: 1;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+    margin-bottom: 20px;
+  }
+  
+  .password-toggle-icon i:hover {
+    color: #000;
+  }
+  @keyframes animate2 {
+    0% {
+      top: -100%;
+    }
+    50%,
+    100% {
+      top: 100%;
+    }
+  }
+  
+  

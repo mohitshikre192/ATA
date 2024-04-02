@@ -1,69 +1,35 @@
 <app-home></app-home>
 <div class="login">
    
-    <!-- <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
-        <div>
-        <input type="text" formControlName="mobile_no" required>
-        <span></span>
-        <label>Mobile No</label>
+    <form class="formc" [formGroup]="loginForm" (ngSubmit)="Login()">
+        <div><br><header class="headerf">LOGIN <a class ="close" href="/">X</a></header><br>
+        <input class="login-field" type="text" formControlName="mobile_no" required>
+      
+        <label>  &nbsp; Mobile No</label>
 
         </div>
         
         <div>
             <input type="password" formControlName="password" required>
-            <span></span>
-            <label >Password</label>
+            <label > &nbsp; Password</label>   
         </div>
         <div>
             <p> please select a role</p>
             <input type="radio" formControlName="role" value="user" required>
-                <label>User</label>
-                <input type="radio" formControlName="role" value="driver" required>
-                <label>Driver Partner</label>
+                <label>   &nbsp; User  &nbsp; </label>
+                <input type="radio" formControlName="role" value="admin" required>
+                <label>   &nbsp; Admin
+                </label>
         </div>
-
+        <input  class="btn btn-dark" type="submit"  value="Signin">
+       
         <div class="pass">Forgot Password?</div>
-        <input type="submit"  value="Login">
+        
         <div class="signup_link">
           Not a member? <a href="signup/">Signup</a>
         </div>
-        <a class="btn btn-dark" href="/">back to home</a>
-    </form> -->
-
-    <form class="formc" [formGroup]="loginForm" (ngSubmit)="Login()">
-        
-        <div> <br><h4>LOGIN</h4><a class ="close"href="/">X</a> </div>
-        <br>
-        <div class="login-field">
-        <div id="mobile">
-            
-            <label>Mobile No</label>
-           <label >&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;</label> 
-            <label  id ="password"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Password</label>
-            <br>
-        </div>
-        <div>
-            <input type="text" class="fields" name="mobile_no" formControlName="mobile_no" placeholder="Enter your mobile no" required>
-            <label > &nbsp; &nbsp; &nbsp;</label>
        
-            <input type="password" class="fields" name="password" formControlName="password" placeholder="Enter your password here" required>
-            <span></span> 
-        </div>
-        <div>
-            <br>
-          
-      <label>Sign in as : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-            <input type="radio" class="fields"  name="role" formControlName="role" value="user" required>
-                <label>User</label>
-                <input type="radio" class="fields" name="role" formControlName="role" value="admin" required>
-                <label>Admin</label>
-        </div>
-     </div>
+    </form>
+    </div>
 
-    <br>
-        <button class="btn"> Login </button>
-        <br>
-        <br>
-        <div class="pass">Forgot Password?</div>
-            </form>
-</div>
+   

@@ -174,3 +174,8 @@ body {
 .container header{
     display: inline;
 }
+.close:hover{
+  color:red;
+  background-color: aliceblue;
+  border: grey 1px solid;
+}

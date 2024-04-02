@@ -11,6 +11,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { SearchComponent } from './components/partial/search/search.component';
+import { VehiclesComponent } from './components/partial/vehicles/vehicles.component';
+import { ToursComponent } from './components/partial/tours/tours.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
     HomeComponent,
     LoginComponent,
     NavbarComponent,
-    SignupComponent
+    SignupComponent,
+    SearchComponent,
+    VehiclesComponent,
+    ToursComponent
   ],
   imports: [
     BrowserModule,
